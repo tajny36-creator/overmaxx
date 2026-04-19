@@ -1,7 +1,7 @@
 {
   "domain": "overmax_go2rtc_bridge",
   "name": "Overmax Tuya go2rtc Bridge",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "documentation": "https://github.com/your-user/overmax-go2rtc-bridge",
   "requirements": [],
   "dependencies": [

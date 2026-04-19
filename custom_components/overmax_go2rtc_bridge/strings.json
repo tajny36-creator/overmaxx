@@ -3,26 +3,44 @@
     "step": {
       "user": {
         "title": "Overmax Tuya go2rtc Bridge",
-        "description": "Dodaj kamerę z mostka go2rtc (strumień Tuya/SmartLife).",
+        "description": "Podaj dane Tuya/SmartLife oraz mapę kamer (format: Nazwa=device_id, każda kamera w nowej linii).",
         "data": {
-          "camera_name": "Nazwa kamery",
-          "stream_name": "Nazwa strumienia go2rtc",
-          "rtsp_host": "Host RTSP go2rtc",
-          "rtsp_port": "Port RTSP go2rtc",
+          "device_map": "Mapa kamer (nazwa=device_id)",
+          "tuya_email": "Email Tuya/SmartLife",
+          "tuya_password": "Hasło Tuya/SmartLife",
+          "tuya_region_host": "Host regionu Tuya (np. protect-eu.ismartlife.me)",
+          "resolution": "Rozdzielczość strumienia",
+          "go2rtc_api_url": "URL API go2rtc (np. http://127.0.0.1:1984)",
+          "go2rtc_api_username": "Użytkownik API go2rtc (opcjonalnie)",
+          "go2rtc_api_password": "Hasło API go2rtc (opcjonalnie)",
+          "rtsp_host": "Host RTSP go2rtc (np. 127.0.0.1)",
+          "rtsp_port": "Port RTSP go2rtc (np. 8554)",
           "rtsp_username": "Użytkownik RTSP (opcjonalnie)",
           "rtsp_password": "Hasło RTSP (opcjonalnie)"
         }
       }
+    },
+    "error": {
+      "cannot_connect": "Nie można połączyć się z API go2rtc.",
+      "auth": "Błąd autoryzacji w API go2rtc.",
+      "invalid_device_map": "Mapa kamer jest pusta lub ma nieprawidłowy format.",
+      "unknown": "Nieznany błąd konfiguracji."
     }
   },
   "options": {
     "step": {
       "init": {
         "title": "Overmax Tuya go2rtc Bridge",
-        "description": "Zmień parametry połączenia z go2rtc.",
+        "description": "Zmień dane połączenia i mapę kamer.",
         "data": {
-          "camera_name": "Nazwa kamery",
-          "stream_name": "Nazwa strumienia go2rtc",
+          "device_map": "Mapa kamer (nazwa=device_id)",
+          "tuya_email": "Email Tuya/SmartLife",
+          "tuya_password": "Hasło Tuya/SmartLife",
+          "tuya_region_host": "Host regionu Tuya",
+          "resolution": "Rozdzielczość strumienia",
+          "go2rtc_api_url": "URL API go2rtc",
+          "go2rtc_api_username": "Użytkownik API go2rtc (opcjonalnie)",
+          "go2rtc_api_password": "Hasło API go2rtc (opcjonalnie)",
           "rtsp_host": "Host RTSP go2rtc",
           "rtsp_port": "Port RTSP go2rtc",
           "rtsp_username": "Użytkownik RTSP (opcjonalnie)",

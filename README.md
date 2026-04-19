@@ -82,14 +82,15 @@ Repository includes a HACS-ready custom integration:
 
 ### What this integration does
 
-- Adds a camera entity via UI (Config Flow).
-- Uses a go2rtc RTSP restream as source (`rtsp://<host>:<port>/<stream_name>`).
-- Works as a bridge when your Overmax/Tuya NVR does not expose local RTSP directly.
+- Adds multiple camera entities via UI (Config Flow).
+- Accepts Tuya/SmartLife login and `name=device_id` map for many cameras.
+- Auto-creates go2rtc streams through API (`PUT /api/streams`) for each camera.
+- Uses go2rtc RTSP outputs as camera sources (`rtsp://<host>:<port>/<stream_name>`).
 
 ### Publish to GitHub
 
 ```powershell
-cd C:\Users\WERTJ\Documents\DEV\iidk
+cd C:\Users\WERTJ\Documents\GitHub\overmax
 git init
 git add .
 git commit -m "Add HACS custom integration: overmax_go2rtc_bridge"
@@ -116,8 +117,15 @@ git push -u origin main
 1. Settings -> Devices & Services -> Add Integration
 2. Select `Overmax Tuya go2rtc Bridge`
 3. Fill:
-- Camera name (example: `Overmax NVR`)
-- go2rtc stream name (example: `overmax_nvr`)
-- go2rtc RTSP host (example: `127.0.0.1`)
-- go2rtc RTSP port (example: `8554`)
-- RTSP user/password only if you enabled auth on go2rtc
+- Camera map (`name=device_id`, one camera per line), example:
+```text
+Salon=bfxxxxxxxxxxxxxxxxxxxx
+Korytarz=baxxxxxxxxxxxxxxxxxxxx
+Brama=cdxxxxxxxxxxxxxxxxxxxx
+```
+- Tuya email/password
+- Tuya region host (EU example: `protect-eu.ismartlife.me`)
+- go2rtc API URL (usually `http://127.0.0.1:1984`)
+- Optional go2rtc API auth (if enabled)
+- go2rtc RTSP host/port (usually `127.0.0.1:8554`)
+- Optional RTSP auth (if enabled in go2rtc)

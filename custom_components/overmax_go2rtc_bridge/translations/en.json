@@ -3,26 +3,44 @@
     "step": {
       "user": {
         "title": "Overmax Tuya go2rtc Bridge",
-        "description": "Add a camera backed by go2rtc stream (Tuya/SmartLife bridge).",
+        "description": "Enter Tuya/SmartLife credentials and camera map (format: Name=device_id, one per line).",
         "data": {
-          "camera_name": "Camera name",
-          "stream_name": "go2rtc stream name",
-          "rtsp_host": "go2rtc RTSP host",
-          "rtsp_port": "go2rtc RTSP port",
+          "device_map": "Camera map (name=device_id)",
+          "tuya_email": "Tuya/SmartLife email",
+          "tuya_password": "Tuya/SmartLife password",
+          "tuya_region_host": "Tuya region host (e.g. protect-eu.ismartlife.me)",
+          "resolution": "Stream resolution",
+          "go2rtc_api_url": "go2rtc API URL (e.g. http://127.0.0.1:1984)",
+          "go2rtc_api_username": "go2rtc API username (optional)",
+          "go2rtc_api_password": "go2rtc API password (optional)",
+          "rtsp_host": "go2rtc RTSP host (e.g. 127.0.0.1)",
+          "rtsp_port": "go2rtc RTSP port (e.g. 8554)",
           "rtsp_username": "RTSP username (optional)",
           "rtsp_password": "RTSP password (optional)"
         }
       }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to go2rtc API.",
+      "auth": "go2rtc API authentication failed.",
+      "invalid_device_map": "Camera map is empty or invalid.",
+      "unknown": "Unknown setup error."
     }
   },
   "options": {
     "step": {
       "init": {
         "title": "Overmax Tuya go2rtc Bridge",
-        "description": "Update go2rtc connection settings.",
+        "description": "Update connection settings and camera map.",
         "data": {
-          "camera_name": "Camera name",
-          "stream_name": "go2rtc stream name",
+          "device_map": "Camera map (name=device_id)",
+          "tuya_email": "Tuya/SmartLife email",
+          "tuya_password": "Tuya/SmartLife password",
+          "tuya_region_host": "Tuya region host",
+          "resolution": "Stream resolution",
+          "go2rtc_api_url": "go2rtc API URL",
+          "go2rtc_api_username": "go2rtc API username (optional)",
+          "go2rtc_api_password": "go2rtc API password (optional)",
           "rtsp_host": "go2rtc RTSP host",
           "rtsp_port": "go2rtc RTSP port",
           "rtsp_username": "RTSP username (optional)",
