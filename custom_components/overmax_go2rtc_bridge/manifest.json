@@ -1,0 +1,15 @@
+{
+  "domain": "overmax_go2rtc_bridge",
+  "name": "Overmax Tuya go2rtc Bridge",
+  "version": "0.1.0",
+  "documentation": "https://github.com/your-user/overmax-go2rtc-bridge",
+  "requirements": [],
+  "dependencies": [
+    "ffmpeg",
+    "stream"
+  ],
+  "codeowners": [],
+  "config_flow": true,
+  "iot_class": "local_push",
+  "integration_type": "service"
+}

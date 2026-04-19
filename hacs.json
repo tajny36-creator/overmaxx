@@ -1,0 +1,9 @@
+{
+  "name": "Overmax Tuya go2rtc Bridge",
+  "content_in_root": false,
+  "domains": [
+    "overmax_go2rtc_bridge"
+  ],
+  "homeassistant": "2024.11.0",
+  "render_readme": true
+}

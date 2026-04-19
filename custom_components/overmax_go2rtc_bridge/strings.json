@@ -1,0 +1,34 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Overmax Tuya go2rtc Bridge",
+        "description": "Dodaj kamerę z mostka go2rtc (strumień Tuya/SmartLife).",
+        "data": {
+          "camera_name": "Nazwa kamery",
+          "stream_name": "Nazwa strumienia go2rtc",
+          "rtsp_host": "Host RTSP go2rtc",
+          "rtsp_port": "Port RTSP go2rtc",
+          "rtsp_username": "Użytkownik RTSP (opcjonalnie)",
+          "rtsp_password": "Hasło RTSP (opcjonalnie)"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Overmax Tuya go2rtc Bridge",
+        "description": "Zmień parametry połączenia z go2rtc.",
+        "data": {
+          "camera_name": "Nazwa kamery",
+          "stream_name": "Nazwa strumienia go2rtc",
+          "rtsp_host": "Host RTSP go2rtc",
+          "rtsp_port": "Port RTSP go2rtc",
+          "rtsp_username": "Użytkownik RTSP (opcjonalnie)",
+          "rtsp_password": "Hasło RTSP (opcjonalnie)"
+        }
+      }
+    }
+  }
+}
