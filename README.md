@@ -129,3 +129,19 @@ Brama=cdxxxxxxxxxxxxxxxxxxxx
 - Optional go2rtc API auth (if enabled)
 - go2rtc RTSP host/port (usually `127.0.0.1:8554`)
 - Optional RTSP auth (if enabled in go2rtc)
+
+### Optional: discover `device_id` by QR login (ipc-eu portal)
+
+If you prefer QR login like `https://ipc-eu.ismartlife.me/login`, use helper:
+
+```powershell
+python .\tuya_qr_device_discovery.py --host ipc-eu.ismartlife.me --open-qr --device-map-out .\device_map.txt
+```
+
+It will:
+- generate QR image,
+- wait for scan confirmation,
+- print and save `name=device_id` lines for all detected cameras.
+
+Then paste resulting lines into the integration field:
+- `Camera map (name=device_id)`
